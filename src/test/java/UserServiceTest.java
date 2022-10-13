@@ -10,8 +10,7 @@ import java.sql.Connection;
 import java.util.List;
 
 public class UserServiceTest {
-    private final Connection connection = Util.getConnection();
-    private final UserDaoJDBCImpl userDaoJDBC = new UserDaoJDBCImpl(connection);
+    private final UserDaoJDBCImpl userDaoJDBC = new UserDaoJDBCImpl();
     private final UserService userService = new UserServiceImpl(userDaoJDBC);
 
     private final String testName = "Ivan";

@@ -17,7 +17,7 @@ public class Util {
     private static final String userName = "root";
     private static final String password = "Lala88lala88lalacr-v";
     private static final String driver = "com.mysql.cj.jdbc.Driver";
-    private static SessionFactory sessionFactory;
+    // private static SessionFactory sessionFactory;
 
     public static Connection getConnection() {
         Connection connection = null;

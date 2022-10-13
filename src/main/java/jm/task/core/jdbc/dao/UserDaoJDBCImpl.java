@@ -12,18 +12,10 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class UserDaoJDBCImpl implements UserDao {
-
-    private Connection connection;
-
-    public UserDaoJDBCImpl(Connection connection) {
-        this.connection = connection;
-    }
+    private final Connection connection;
 
     public UserDaoJDBCImpl() {
-    }
-
-    public void setConnection(Connection connection) {
-        this.connection = connection;
+        connection = Util.getConnection();
     }
 
     public void createUsersTable() {
@@ -79,7 +71,6 @@ public class UserDaoJDBCImpl implements UserDao {
             }
             System.out.println(e.getMessage());
         }
-        System.out.println("User с именем – " + name + " добавлен в базу данных");
     }
 
     public void removeUserById(long id) {
